@@ -1,0 +1,43 @@
+# --- Windows system files ---
+Thumbs.db
+desktop.ini
+
+# --- VS Code ---
+.vscode/
+
+# --- Android Studio / IntelliJ IDEA ---
+.idea/
+*.iml
+.gradle/
+build/
+local.properties
+
+# --- Python 3.13 ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.egg-info/
+*.egg
+*.coverage
+*.log
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# --- Google Antigravity IDE (placeholder section) ---
+# Add specific folders/files once you know what it generates
+.antigravity/
+antigravity_workspace/
+antigravity_temp/
+
+# --- General build artifacts ---
+bin/
+obj/
+dist/
+out/
