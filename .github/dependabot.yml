@@ -1,0 +1,101 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # 1. Python (Your current language)
+  # Looks for: requirements.txt, setup.py, pyproject.toml, etc.
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "05:00"      # Run daily at 5:00 AM
+      timezone: "UTC"     # Use Coordinated Universal Time (best practice)
+    # Grouping added to combine minor/patch updates into one PR (reduces PR spam)
+    groups:
+      safe-updates:
+        update-types:
+          - "minor"
+          - "patch"
+        patterns:
+          - "*" 
+      major-updates:
+        update-types:
+          - "major"
+    # Limit the number of open PRs for this ecosystem at any given time
+    open-pull-requests-limit: 10 
+
+  # 2. JavaScript/Node.js (for web development, serverless, or tooling)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "05:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 10 # Limit open PRs for this ecosystem
+      
+  # 3. Docker (for container images)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "05:00"
+      timezone: "UTC"
+
+  # 4. GitHub Actions (for CI/CD workflows)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "05:00"
+      timezone: "UTC"
+
+  # 5. Java/JVM (for Maven projects)
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "05:00"
+      timezone: "UTC"
+
+  # 6. PHP (for Composer projects)
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "05:00"
+      timezone: "UTC"
+
+  # 7. Go (for Go modules projects)
+  - package-ecosystem: "go-modules"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "05:00"
+      timezone: "UTC"
+
+  # 8. Rust (for Cargo projects)
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "05:00"
+      timezone: "UTC"
+
+  # 9. .NET/C# (for NuGet projects)
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "05:00"
+      timezone: "UTC"
+
+  # 10. Development Containers
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "05:00"
+      timezone: "UTC"
