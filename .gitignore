@@ -30,11 +30,11 @@ env/
 .venv/
 .env/
 
-# --- Google Antigravity IDE (placeholder section) ---
-# Add specific folders/files once you know what it generates
+# --- Google Antigravity IDE / Workspace Files ---
 .antigravity/
-antigravity_workspace/
 antigravity_temp/
+*.history
+.workspace
 
 # --- General build artifacts ---
 bin/
